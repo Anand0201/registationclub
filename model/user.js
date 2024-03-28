@@ -3,15 +3,15 @@ const mongodb = require('mongoose')
 const student = mongodb.Schema({
     personalinformation:{
         name: { type: String, required: true },
-        studentID: { type: Number, required: true },
+        studentID: { type: String, required: true },
         email: { type: String, required: true },
-        phone:{ type: Number, required: true }
+        phone:{ type: String, required: true }
     },
     acadamic:{
         Department: { type: String, required: true },
         semester: { type: String, required: true },
         year:{ type: String, required: true },
-        spi:{ type: Number, required: true },
+        spi:{ type: String, required: true },
     },
     codeexperience:{
         coderating:{ type: String, required: true },
