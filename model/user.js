@@ -1,0 +1,32 @@
+const mongodb = require('mongoose')
+
+const student = mongodb.Schema({
+    personalinformation:{
+        name: { type: String, required: true },
+        studentID: { type: Number, required: true },
+        email: { type: String, required: true },
+        phone:{ type: Number, required: true }
+    },
+    acadamic:{
+        Department: { type: String, required: true },
+        semester: { type: String, required: true },
+        year:{ type: String, required: true },
+        spi:{ type: Number, required: true },
+    },
+    codeexperience:{
+        coderating:{ type: String, required: true },
+        language:{ type: Array, required: true },
+        beforeparticipate:{ type: String, required: true },
+    },
+    codingexperectations:{ type: String, required: true },
+    availability: {
+        hour:{ type: Number, required: true },
+        week:{ type: Array, require: true }
+    },
+    additionalinfo:{
+        type: String,
+        required: true
+    }
+});
+
+exports.student =  mongodb.model('Stu', student);

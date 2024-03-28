@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- ctrl + / = comments -->
+<!-- <!DOCTYPE html>  : tells browser about the version of html -->
+<html lang="en">
+<!-- <html lang="en">, the lang attribute is set to "en", indicating that the primary language of the document is English -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta />
+            tag is used to provide metadata about the HTML document,
+            <meta charset="UTF-8" />
+            specifies the character encoding for the document, indicating that the text in
+            the document is encoded using UTF-8.  Unicode Transformation Format, 8-bit -->
+  <!-- Metadata refers to data that provides information about other data. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- The
+    <meta />
+    tag with the name="viewport" attribute is commonly used in web development
+    to control the layout and scaling of the webpage on different devices,
+    particularly on mobile devices. -->
+  <link rel="stylesheet" href="css/coding_club_registeration.css" />
+  <title>College Coding Club Registration</title>
+</head>
+<!-- It's a container for metadata and other information about the document that isn't directly visible on the webpage itself. -->
+
+<body>
+  <div class="container">
+    <form action="/submitRegistration" method="post">
+      <!-- The <div> element in HTML is a generic container used to divide or section off parts of an HTML document.  -->
+      <h2>College Coding Club Registration</h2>
+      <div class="section">
+        <h3>Personal Information:</h3>
+        <input type="text" name="full_name" id="full_name" placeholder="Full Name" required />
+        <input type="text" name="student_id" id="student_id" placeholder="Student ID Number" required />
+        <!-- input element is used to collect user information, 
+            type specifies the type of data expected, required attribute declare 
+            that the user input is neccessary and placeholder gives the hint to user -->
+        <!--1 bar yhan pr text ki  jaga pr number krna-->
+        <input type="email" name="emailid" id="emailid" placeholder="Email Address" required />
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
+      </div>
+      <div class="section">
+        <h3>Academic Information:</h3>
+        <select name="Program" id="Program" required>
+          <option value="">Select Program</option>
+          <option value="Degree">Degree</option>
+          <option value="Diploma">Diploma</option>
+        </select>
+        <!-- select is used for dropdown list, option represents options of dropdown  -->
+        <select name="semester" id="semester" required>
+          <option value="">Select Semester</option>
+          <option value="2nd">2nd Semester</option>
+          <option value="4th">4th Semester</option>
+          <option value="6th">6th Semester</option>
+        </select>
+        <select name="year" id="year" required>
+          <option value="">Select Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+        </select>
+        <input type="text" name="spi" id="spi" placeholder="Last Result SPI" required />
+      </div>
+      <div class="section">
+        <h3>Coding Experience:</h3>
+        <!--muja in sabko b required ma convert krna h-->
+        <p>How would you rate your coding proficiency?</p>
+        <label><input type="radio" name="coding_proficiency" id="coding_proficiency" value="beginner" />Beginner</label>
+        <!--radio: only  single option is selected-->
+        <label><input type="radio" name="coding_proficiency" id="coding_proficiency" value="intermediate" />Intermediate</label>
+        <label><input type="radio" name="coding_proficiency" id="coding_proficiency" value="advanced" />Advanced</label>
+        <!-- In HTML, the <label> element is used to associate a label with a form control, 
+            such as an <input>, <select>, or <textarea> element. It provides a textual description or 
+                caption for the associated form control, making it easier for 
+                users to understand the purpose of the control or input field. -->
+        <p>Which programming languages are you familiar with?</p>
+        <label><input type="checkbox" name="languages" id="languages" value="python" />Python</label>
+        <!--languages[] ya array ma store krvaynga values jo b multiple options select honga isma-->
+        <label><input type="checkbox" name="languages" id="languages" value="java" />Java</label>
+        <label><input type="checkbox" name="languages" id="languages" value="c/cpp" />C/C++</label>
+        <label><input type="checkbox" name="languages" id="languages" value="javaScript" />JavaScript</label>
+        <label><input type="checkbox" name="languages" id="languages" value="html/css" />Html/Css</label>
+        <!--<label>-->
+        <input type="text" name="languages" id="languages" placeholder="Specify Other" /><!--Specify Other</label>-->
+        <!--ya comments haata kar dekho-->
+        <p>
+          Have you participated in any coding competitions or hackathons before?
+        </p>
+        <textarea name="coding_experience" id="coding_experience" placeholder="If yes, please specify"></textarea>
+        <!--textarea allow krta h multiple line responses-->
+      </div>
+      <div class="section">
+        <h3>Coding Expectations:</h3>
+        <textarea name="coding_expectations" id="coding_expectations"
+          placeholder="What are your expectations from joining the College Coding Club?" required></textarea>
+        <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+        <!--try this for increasing the size of box-->
+      </div>
+      <div class="section">
+        <h3>Availability:</h3>
+
+
+        <input type="number" name="code_hour" id="code_hour" placeholder="Enter hours" min="0" required>
+
+
+        <p>
+          Which days of the week are you available for the club meetings and
+          events?
+        </p>
+        <label><input type="checkbox" name="availability" id="availability" value="monday" />Monday</label>
+        <label><input type="checkbox" name="availability" id="availability" value="tuesday" />Tuesday</label>
+        <label><input type="checkbox" name="availability" id="availability" value="wednesday" />Wednesday</label>
+        <label><input type="checkbox" name="availability" id="availability" value="thursday" />Thursday</label>
+        <label><input type="checkbox" name="availability" id="availability" value="friday" />Friday</label>
+        <label><input type="checkbox" name="availability" id="availability" value="saturday" />Saturday</label>
+      </div>
+      <div class="section">
+        <h3>Additional Information:</h3>
+        <textarea name="additional_info" id="additional_info"
+          placeholder="Do you have any suggestions or ideas for club activities or projects?"></textarea>
+      </div>
+      <div class="section">
+        <h3>Consent</h3>
+        <label><input type="checkbox" name="consent" id="consent" value="agree" required /> I
+          agree to the terms and conditions</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
