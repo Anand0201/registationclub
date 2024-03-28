@@ -19,7 +19,12 @@ app.get('/', (req, res) => {
 })
 
 app.post('/submitRegistration', async (req, res) => {
+
     const { full_name, student_id, emailid, phone, Program, semester, year, spi, coding_proficiency, languages, coding_experience, coding_expectations, code_hour, availability, additional_info } = req.body;
+    const existingStudent = await student.findOne({ 'personalinformation.email': emailid });
+    if (existingStudent) {
+        return res.status(400).send('Already registered');
+    }
     let newStudent = new student ({ personalinformation: {name: full_name, 
         studentID : student_id, 
         email: emailid, 
