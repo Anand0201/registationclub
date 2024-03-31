@@ -49,7 +49,7 @@ app.post('/submitRegistration', async (req, res) => {
     additionalinfo: additional_info });
     await newStudent.save()
     console.log('user register successfully complated')
-    res.redirect('https://voluble-kitsune-fb1f1c.netlify.app/')
+    res.redirect('https://coding-club-sltiet-i55q.onrender.com/')
 
 })
 
