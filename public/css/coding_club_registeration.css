@@ -577,8 +577,8 @@ h2 {
   box-sizing: border-box;
   border-radius: 16px;
   background-size: 200% 100%;
-  -webkit-animation: gradient 5s ease infinite;
-  animation: gradient 5s ease infinite;
+  -webkit-animation: gradient 3s ease infinite;
+  animation: gradient 3s ease infinite;
 }
 
 @-webkit-keyframes gradient {
