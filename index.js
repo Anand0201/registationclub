@@ -33,7 +33,6 @@ app.post('/submitRegistration', async (req, res) => {
     acadamic:{
         Department: Program, 
         semester: semester, 
-        year: year, 
         spi: spi
     },
     codeexperience:{
