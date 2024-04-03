@@ -10,7 +10,6 @@ const student = mongodb.Schema({
     acadamic:{
         Department: { type: String, required: true },
         semester: { type: String, required: true },
-        year:{ type: String, required: true },
         spi:{ type: String, required: true },
     },
     codeexperience:{
