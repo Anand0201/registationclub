@@ -23,8 +23,7 @@ const student = mongodb.Schema({
         week:{ type: Array, require: true }
     },
     additionalinfo:{
-        type: String,
-        required: true
+        type: String
     }
 });
 
