@@ -13,14 +13,14 @@ const student = mongodb.Schema({
         spi:{ type: String, required: true },
     },
     codeexperience:{
-        coderating:{ type: String, required: true },
-        language:{ type: Array, required: true },
-        beforeparticipate:{ type: String, required: true },
+        coderating:{ type: String },
+        language:{ type: Array },
+        beforeparticipate:{ type: String },
     },
-    codingexperectations:{ type: String, required: true },
+    codingexperectations:{ type: String },
     availability: {
-        hour:{ type: Number, required: true },
-        week:{ type: Array, require: true }
+        hour:{ type: Number },
+        week:{ type: Array }
     },
     additionalinfo:{
         type: String
